@@ -16,6 +16,7 @@
 <ul>
     <li><a href="/">Welcome</a></li>
     <li><a href="/projects">Projects</a></li>
+    <li><a href="/recetteV2">RecetteV2</a> </li>
 </ul>
     {{--Voir le type de la varible --}}
     {{--@dump($slot)--}}

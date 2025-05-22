@@ -3,6 +3,7 @@
 use App\Models\Recette;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecetteV2Controller;
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -26,4 +27,8 @@ Route::get('/recettes/{id}', function (int $id){
     $recette = $model->getById($id);
     return view('recettes.show', compact('recette'));
 })->name('recettes.show');
+
+/* Création de la route recetteV2 */
+Route::resource('recetteV2', RecetteV2Controller::class);
+
 
