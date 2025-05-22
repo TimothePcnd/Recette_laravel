@@ -13,7 +13,6 @@
                 <tr>
                     <th>Title</th>
                     <th>Description</th>
-                    <th>Status</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -22,10 +21,9 @@
                     <tr>
                         <td>{{ $recetteV2->title }}</td>
                         <td>{{ $recetteV2->description }}</td>
-                        <td>{{ $recetteV2->status }}</td>
                         <td>
-                            <a href="{{ route('tasks.edit', $recetteV2->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                            <form action="{{ route('tasks.destroy', $recetteV2->id) }}" method="POST" style="display:inline;">
+                            <a href="{{ route('recetteV2.edit', $recetteV2->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                            <form action="{{ route('recetteV2.destroy', $recetteV2->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>

@@ -14,8 +14,10 @@
                 <label for="description">Description</label>
                 <textarea name="description" id="description" class="form-control" required></textarea>
             </div>
+            @method('POST')
             <button type="submit" class="btn btn-success">Save</button>
         </form>
     </div>
+
 {{--@endsection--}}
 </x-layout>
