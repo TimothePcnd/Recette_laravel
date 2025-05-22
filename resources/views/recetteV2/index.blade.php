@@ -11,15 +11,15 @@
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Actions</th>
+                    <th class="p-3 mb-2 bg-secondary text-white">Title</th>
+                    <th class="p-3 mb-2 bg-secondary text-white">Description</th>
+                    <th class="p-3 mb-2 bg-secondary text-white">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach ($recettesV2 as $recetteV2)
                     <tr>
-                        <td>{{ $recetteV2->title }}</td>
+                        <td class="">{{ $recetteV2->title }}</td>
                         <td>{{ $recetteV2->description }}</td>
                         <td>
                             <a href="{{ route('recetteV2.edit', $recetteV2->id) }}" class="btn btn-warning btn-sm">Edit</a>

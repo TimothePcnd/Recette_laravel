@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Recette;
 use App\Models\RecetteV2;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RecetteV2Controller extends Controller
 {
@@ -26,23 +27,33 @@ class RecetteV2Controller extends Controller
             'description' => 'required|string',
         ]);
 
-        RecetteV2::create($request->all());
-        return redirect()->route('recettesV2.index')->with('success', 'RecettesV2 created successfully');
+        /*RecetteV2::create($request->all());*/
+        DB::table('recette_V2_s')->insert([
+            'title' => $request->title,
+            'description' => $request->description
+        ]);
+        return redirect()->route('recetteV2.index')->with('success', 'RecettesV2 created successfully');
     }
 
     public function edit(RecetteV2 $recetteV2)
     {
-        return view('recettesV2.edit', compact('recetteV2'));
+        return view('recetteV2.edit', compact('recetteV2'));
     }
 
     public function update(Request $request, RecetteV2 $recetteV2)
     {
+
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
         ]);
 
-        $recetteV2->update($request->all());
+        DB::table('recette_V2_s')
+            ->where('id', $recetteV2->id)
+            ->update([
+            'title' => $request->title,
+            'description' => $request->description
+        ]);
         return redirect()->route('recetteV2.index')->with('success', 'RecetteV2 updated successfully.');
     }
 
