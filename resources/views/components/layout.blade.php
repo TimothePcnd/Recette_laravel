@@ -13,34 +13,22 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-    <div class="container">
-        <a class="navbar-brand mx-auto text-uppercase" href="/">Les recettes de la mama</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCentered" aria-controls="navbarCentered" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarCentered">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Welcome</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/recetteV2">RecetteV2</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<nav class="bg-light py-2">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link fw-bold" href="/">Welcome</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold" href="/projects">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-bold" href="/recetteV2">RecetteV2</a>
+        </li>
+    </ul>
 </nav>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-{{--<ul>
-    <li><a href="/">Welcome</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/recetteV2">RecetteV2</a> </li>
-</ul>--}}
+
+
     {{--Voir le type de la varible --}}
     {{--@dump($slot)--}}
     {{--Affichage de la variable --}}
